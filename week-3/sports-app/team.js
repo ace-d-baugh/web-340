@@ -6,7 +6,7 @@
 ; Description: Assignment 3.2 - Node's Module System
 ;              Class constructor of the teams
 ;===========================================
-*/ 
+*/
 
 class Team {
 	constructor(name, mascot, playerCount) {

@@ -35,8 +35,7 @@ function findTeam(name) {
 function getGame() {
 	return `${findTeam('Kansas Innerstate University').name} ${findTeam('Kansas Innerstate University').mascot} is playing ${
 		findTeam('Hawaii College Tech').name
-	} ${findTeam('Hawaii College Tech').mascot} on ${moment().add(7, 'days').calendar().format('MM-DD-YYYY')} at 7:30 PM CST.`;
+	} ${findTeam('Hawaii College Tech').mascot} on ${moment().add(7, 'days').format('MM-DD-YYYY')} at 7:30 PM CST.`;
 }
 
-module.export = findTeams;
-module.export = getGame;
+module.exports = { findTeams, getGame };
