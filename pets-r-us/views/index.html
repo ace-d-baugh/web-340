@@ -6,9 +6,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title><%- title %></title>
 
-      <link rel="stylesheet" href="/styles/site.css" type="text/css">
+		<link rel="stylesheet" href="/styles/site.css" type="text/css" />
 	</head>
 	<body>
+		<%- include('./partials/header.html') %> 
+      <%- include('./partials/hero.html') %> 
+      <%- include('./partials/about.html') %> 
+      <%- include('./partials/locations.html') %> 
+      <%- include('./partials/weekly-dog.html') %> 
+      <%- include('./partials/testimonials.html') %> 
+      <%- include('./partials/contact-form.html') %>
+
 		<h1><%- message %></h1>
+
+		<%- include('./partials/footer.html') %>
 	</body>
 </html>
