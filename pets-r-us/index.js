@@ -3,6 +3,8 @@ const path = require('path');
 
 const app = express();
 
+const title = 'Pets-R-Us';
+
 app.engine('html', require('ejs').__express);
 
 app.set('views', path.join(__dirname, 'views'));
@@ -14,16 +16,14 @@ const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
    res.render('index', {
-      title: 'Pets R Us',
-      pageTitle: 'Welcome to Pets R Us',
-      message: 'Welcome to Pets R Us'
+      title: `${title} | Welcome to Pets-R-Us`,
+      message: 'Welcome to Pets-R-Us'
    });
 });
 
 app.get('/grooming.html', (req, res) => {
 	res.render('grooming', {
-      title: 'Pets R Us',
-      pageTitle: 'Grooming',
+      title: `${title} | Grooming`,
       message: 'Lets get your pet groomed'
 
    });
