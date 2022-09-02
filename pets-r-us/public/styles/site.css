@@ -15,6 +15,7 @@
 	--anchor-hover-background-color: #ffd540;
 	--card-background-color: #fff;
 	--card-title-color: #4f3674;
+   --card-border-color: #009fe8;
 	--btn-background-color: #009fe8;
 	--btn-color: #fff;
 	--btn-border-color: #000;
@@ -377,13 +378,21 @@ hr {
    flex-direction: column;
    align-items: center;
    margin-bottom: 1em;
-   width: 18em;
+   width: 17em;
    flex-wrap: wrap;
+   border: 2px solid var(--card-border-color);
+   border-radius: 10px;
+   padding: .5em;
 }
 
 .location-name {
-   font-size: 1.5rem;
+   font-size: 1.75rem;
    font-weight: 700;
+}
+
+.location-address {
+   font-size: 1.25rem;
+   font-weight: 400;
 }
 
 .location-hours {
