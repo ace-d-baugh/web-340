@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 
 const title = `Pets-&#7449;-Us`;
-const companyName = `Pets-<span class="reverse">&#7449;</span>-Us`;
+const companyName = `Pets-<span class="the-r">&#7449;</span>-Us`;
 
 app.engine('html', require('ejs').__express);
 
