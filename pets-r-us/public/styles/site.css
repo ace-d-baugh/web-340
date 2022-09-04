@@ -46,8 +46,8 @@ body {
 	width: 100%;
 	font-family: var(--primary-font-family);
 	color: var(--text-color);
-   display: flex;
-   flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 a {
@@ -125,7 +125,7 @@ h4 {
 .btn-primary:hover {
 	background-color: var(--btn-hover-background-color);
 	color: var(--btn-hover-color);
-   border-color: var(--btn-hover-color);
+	border-color: var(--btn-hover-color);
 }
 
 /* Style for input fields and dropdown menu selects */
@@ -157,6 +157,11 @@ h4 {
 	font-size: 2em;
 	font-weight: bold;
 	z-index: 2;
+	font-family: var(--emphasis-font-family);
+}
+
+.company-name {
+   display: inline-flex;
 }
 
 .navbar {
@@ -230,11 +235,6 @@ h4 {
 .navbar-item a:hover {
 	background-color: var(--anchor-hover-background-color);
 	color: var(--anchor-hover-color);
-}
-
-.the-r {
-	font-size: 1.75em;
-	line-height: 0.5em;
 }
 
 .hero-section {
@@ -444,6 +444,11 @@ hr {
 
 .reverse {
 	transform: rotateY(180deg);
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);
 }
 
 .weekly-dog-content {
@@ -536,7 +541,7 @@ hr {
 
 .contact-form {
 	width: 100%;
-   padding: 0 2em 2em;
+	padding: 0 2em 2em;
 }
 
 .contact-form-title {
@@ -548,30 +553,31 @@ hr {
 }
 
 .contact-form-content {
-   display: flex;
-   justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .form {
-   width: 30em;
+	width: 30em;
 }
 
 .form-control {
 	width: 100%;
 	padding: 0.5em;
 	margin: 0.5em 0;
-   outline: none;
+	outline: none;
 	border: 2px solid var(--card-border-color);
 	border-radius: 10px;
 }
 
-.form-control:active, .form-control:focus {
-   outline: none;
+.form-control:active,
+.form-control:focus {
+	outline: none;
 	border: 2px solid var(--input-active-border-color);
 }
 
 .grooming {
-	padding: 0 2em 1em;
+	padding: 1em 2em 1em;
 }
 
 .grooming-title {
@@ -598,7 +604,6 @@ hr {
 	justify-content: center;
 }
 
-
 .packages-pricing-section {
 	padding: 0 0 2em;
 }
@@ -613,13 +618,13 @@ hr {
 
 .packages-pricing {
 	display: flex;
-   flex-wrap: wrap;
+	flex-wrap: wrap;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-evenly;
-   padding: 1em 0;
-   margin: .25em;
-   gap: .5em;
+	padding: 1em 0;
+	margin: 0.25em;
+	gap: 0.5em;
 }
 
 .package-pricing {
@@ -629,68 +634,67 @@ hr {
 	border: 2px solid var(--card-border-color);
 	border-radius: 10px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-   display: flex;
-   flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .package-pricing-header {
 	width: 100%;
-   text-align: center;
-   font-size: 1.5em;
-   font-family: var(--emphasis-font-family);
+	text-align: center;
+	font-size: 1.5em;
+	font-family: var(--emphasis-font-family);
 	background-color: var(--header-background-color);
 	border-radius: 5px 5px 0 0;
-   padding: 1em 0;
+	padding: 1em 0;
 }
 
 .package-pricing-body {
-   flex: 1;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   padding: .25em;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0.25em;
 }
 
 .package-pricing-body i {
-   padding: 0.25em;
+	padding: 0.25em;
 }
 
 .package-right {
-   text-align: right;
-   padding-top: .75em;
+	text-align: right;
+	padding-top: 0.75em;
 }
 
 .package-plus {
-   font-weight: 700;
+	font-weight: 700;
 }
 
 .package-price {
-   font-size: 1.5em;
-   font-family: var(--emphasis-font-family);
-   text-align: center;
-   padding: 0.5em 0;
+	font-size: 1.5em;
+	font-family: var(--emphasis-font-family);
+	text-align: center;
+	padding: 0.5em 0;
 }
 
 .popular {
-   height: 30em;
+	height: 30em;
 	border: 2px solid var(--feature-background-color);
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3),
-               0px 0px 30px var(--feature-background-color);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3), 0px 0px 30px var(--feature-background-color);
 }
 
 .popular .package-pricing-header {
-   background-color: var(--feature-background-color);
+	background-color: var(--feature-background-color);
 }
 
 .popular .package-pricing-footer {
-   width: 100%;
-   text-align: center;
-   font-size: 1.5em;
-   font-family: var(--emphasis-font-family);
-   background-color: var(--feature-background-color);
-   border-radius: 0 0 5px 5px;
-   padding: 1em 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.5em;
+	font-family: var(--emphasis-font-family);
+	background-color: var(--feature-background-color);
+	border-radius: 0 0 5px 5px;
+	padding: 1em 0;
 }
 
 .footer {
@@ -704,14 +708,14 @@ hr {
 }
 
 .footer-social {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
 
 .footer-social-icon {
-   padding: 0 0.5em;
+	padding: 0 0.5em;
 }
 
 .footer-links {
@@ -732,13 +736,13 @@ hr {
 }
 
 .footer-locations {
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
-   align-items: center;
-   justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
 
 .footer-location {
-   padding: 0.75em;
+	padding: 0.75em;
 }

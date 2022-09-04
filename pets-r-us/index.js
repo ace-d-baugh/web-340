@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 
 const title = `Pets-&#7449;-Us`;
-const companyName = `Pets-<span class="the-r">&#7449;</span>-Us`;
+const companyName = `<div class="company-name">Pets-<div class="reverse">R</div>-Us</div>`;
 
 app.engine('html', require('ejs').__express);
 
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 	res.render('index', {
 		title: `${title} | Welcome to Pets-&#7449;-Us`,
 		message: `Welcome to ${companyName}`,
-      companyName: companyName,
+		companyName: companyName,
 	});
 });
 
@@ -27,7 +27,7 @@ app.get('/grooming.html', (req, res) => {
 	res.render('grooming', {
 		title: `${title} | Grooming`,
 		message: 'Lets get your pet groomed',
-      companyName: companyName,
+		companyName: companyName,
 	});
 });
 
