@@ -8,8 +8,10 @@
 ============================================ */
 
 // Require statements for express, http, and path
+const { Console } = require('console');
 const express = require('express');
 const path = require('path');
+const Routes = require('./routes');
 
 // Create the express application
 const app = express();
@@ -31,20 +33,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Port to listen on
 const PORT = process.env.PORT || 3000;
 
-// Route for the home page
-app.get('/', (req, res) => {
-	res.render('index', {
-		title: `${title} | Welcome to Pets-&#7449;-Us`,
-		message: `Welcome to ${companyName}`,
-		companyName: companyName,
-	});
-});
+// Loops through the routes object and creates a route for each
+// then renders the page
+for(let [url, page] of Object.entries(Routes.Routes)) {
+   app.get(url, (req, res) => {
+      res.render(page, {
+			// Passes the title and company name to the page
+			title: `${title} | ${page[0].toUpperCase() + page.slice(1)}`,
+			companyName: companyName,
+		});
+   });
+};
 
-// Route for grooming url
-app.get('/grooming.html', (req, res) => {
-	res.render('grooming', {
-		title: `${title} | Grooming`,
-		message: 'Lets get your pet groomed',
+// If page is not found, render the 404 page
+app.use((req, res) => {
+   res.status(404).render('404', {
+		title: `${title} | 404 - Page Not Found!`,
 		companyName: companyName,
 	});
 });

@@ -72,12 +72,14 @@ a:hover {
 .btn-primary {
 	background-color: var(--btn-background-color);
 	color: var(--btn-color);
+	border-radius: .5em;
 }
 
 .btn-primary:hover {
 	background-color: var(--btn-hover-background-color);
 	color: var(--btn-hover-color);
 	border-color: var(--btn-hover-color);
+	border-radius: .5em;
 }
 
 .call-to-action {
@@ -220,6 +222,16 @@ hr {
    overflow: hidden;
 }
 
+/* snippet to mirror whatever needed */
+.reverse {
+	transform: rotateY(180deg);
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+
 .section-title {
 	text-align: center;
 	font-size: 2.5rem;
@@ -234,6 +246,10 @@ hr {
 
 .wrap-image {
    display: block;
+}
+
+.wrap-image img {
+   width: 100%;
 }
 
 /* ##################
@@ -463,15 +479,6 @@ SPECIFIC COMPONENTS
 	font-family: var(--emphasis-font-family);
 }
 
-.reverse {
-	transform: rotateY(180deg);
-	-moz-transform: scale(-1, 1);
-	-webkit-transform: scale(-1, 1);
-	-o-transform: scale(-1, 1);
-	-ms-transform: scale(-1, 1);
-	transform: scale(-1, 1);
-}
-
 .weekly-dog-content {
 	display: flex;
 	flex-direction: row-reverse;
@@ -535,6 +542,10 @@ SPECIFIC COMPONENTS
 .contact-form-content {
 	display: flex;
 	justify-content: center;
+}
+
+.contact-form-btn {
+   align-self: flex-end;
 }
 
 /* Grooming Page Packages styles */
@@ -629,9 +640,9 @@ SPECIFIC COMPONENTS
       display: inline
    }
    .wrap-image img {
-	   float: right;
-	   max-width: 30%;
-	   padding: 0 0 0.5em 0.5em;
+      float: right;
+      max-width: 30%;
+      margin: 0 0 0.5em 0.5em;
    }
 
 }
